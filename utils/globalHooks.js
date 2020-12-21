@@ -8,7 +8,7 @@ before(async () => {
 });
 after(async () => {
   console.log('after Hook');
-  const clientID = await queryCreatedClient(clientName);
+  const clientID = await archiveCreatedClient(clientName);
   console.log(clientID.id);
 });
 export async function userAuth() {
@@ -36,7 +36,7 @@ export async function userAuth() {
   };
 }
 
-export async function queryCreatedClient(organizationName) {
+export async function archiveCreatedClient(organizationName) {
   const sequelize = new Sequelize(
     process.env.DATABASE_NAME,
     process.env.DATABASE_USER_NAME,
