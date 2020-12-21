@@ -1,0 +1,30 @@
+{
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "plugins": [
+        "mocha",
+        "prettier"
+      ],
+    "extends": [
+        "plugin:mocha/recommended",
+        "prettier",
+        "eslint-config-prettier"
+      ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": "off",// Remember, this means error! 
+        "prettier/prettier": 1, // Means error
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "mocha/no-mocha-arrows": "off",
+        "mocha/no-async-describe": "off",
+        "mocha/no-exports": "off",
+        "mocha/no-top-level-hooks": "off",
+        "mocha/no-hooks-for-single-case": "off"
+    }
+}
