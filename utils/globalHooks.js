@@ -12,7 +12,7 @@ after(async () => {
   console.log(clientID.id);
 });
 export async function userAuth() {
-  const url = process.env.ENVIRONEMENT;
+  const url = process.env.ENVIROMENT;
   const username = process.env.USERNAME_ADMIN;
   const password = process.env.USER_PASSWORD;
 
@@ -29,7 +29,7 @@ export async function userAuth() {
   await axiosBasicAuth.get(url);
 
   //setting base url and headers for other requests
-  axios.defaults.baseURL = process.env.ENVIRONEMENT;
+  axios.defaults.baseURL = process.env.ENVIROMENT;
   axios.defaults.headers = {
     Authorization: `Basic ${base64data}`,
     'X-Authorization': 'userId=1&role=admins',
