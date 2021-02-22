@@ -1,7 +1,7 @@
 import { clientName } from '../tests/createNewClient.spec';
 require('dotenv-flow').config();
-const axios = require('axios').default;
-const { Sequelize, QueryTypes } = require('sequelize');
+import axios from 'axios';
+import { Sequelize, QueryTypes } from 'sequelize';
 
 before(async () => {
   await userAuth();
