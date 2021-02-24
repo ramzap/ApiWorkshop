@@ -7,7 +7,7 @@ export let clientName;
 
 describe('Client create test suite', async () => {
   it('Should test that it is possible to create new client', async () => {
-    const timestamp = new Date().toLocaleString();
+    const timestamp = Date.now();
     clientName = `Name of organization${timestamp}`;
     const responseFromClientCreate = await createClient(clientName);
 
