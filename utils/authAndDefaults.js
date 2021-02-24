@@ -6,7 +6,8 @@ import { Sequelize, QueryTypes } from 'sequelize';
 before(async () => {
   await userAuth();
 });
-after(async () => {
+after(async function () {
+  this.timeout(15000);
   console.log('after Hook');
   const clientID = await archiveCreatedClient(clientName);
   console.log(clientID.id);
